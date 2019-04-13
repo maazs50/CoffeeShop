@@ -1,19 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
-
     <EditText
-        android:id="@+id/nametxt"
+        android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
         android:hint="Name"
-        android:textColor="@color/colorPrimaryDark"
-        android:layout_marginTop="16dp"/>
+        />
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="16dp"
+    android:layout_marginTop="16dp"
+    android:textSize="20sp"
+    android:textAllCaps="true"
+    android:text="Toppings"
+    />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_height="wrap_content">
+        <CheckBox
+            android:id="@+id/creamed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Whipped Cream"/>
+        <CheckBox
+            android:id="@+id/chocolate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chocolate"/>
+
+    </LinearLayout>
+    <CheckBox
+        android:id="@+id/takeAway"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Take Away"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -58,19 +97,19 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
-        android:text="Price"
+        android:text="Order Summary"
         android:textAllCaps="true"
         android:textSize="20sp" />
 
     <TextView
-        android:id="@+id/price_textview"
+        android:id="@+id/order_summary_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:text="₹10"
         android:textColor="@color/black"
-        android:textSize="24sp" />
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/orderButton"
@@ -81,3 +120,4 @@
         android:onClick="submitOrder"
         android:text="Order" />
 </LinearLayout>
+</ScrollView>
